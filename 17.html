@@ -13,26 +13,23 @@
         <a-assets>
             <img id="floor" src="17/floor-1024.jpg">
 			<!-- https://sketchfab.com/models/e512a5adb1904a71a1bd53c4a21b48d4 -->
-            <a-asset-item id="tl" src="17/traffic-light.gltf"></a-asset-item>
+            <a-asset-item id="tl" src="17/traffic_light.gltf"></a-asset-item>
 			<!-- https://sketchfab.com/models/fdc8b5ba548243448f9b918ea7892786 -->
-            <a-asset-item id="ssl" src="17/suburban-street-lamp.gltf"></a-asset-item>
+            <a-asset-item id="ssl" src="17/suburban_street_lamp.gltf"></a-asset-item>
             <!-- To troubleshoot issues related to renaming 3D objects check Lecture 14 -->
         </a-assets>
 
         <!-- Custom Light | Ambient -->
-        <a-entity light="type: ambient; intensity: 0.2">
-        </a-entity>
+        <a-entity light="type: ambient; intensity: 0.2"></a-entity>
 
         <!-- Custom Light | Directional -->
-        <a-entity light="type: directional; intensity: 0.2" position="-0.5 1 1">
-        </a-entity>
+        <a-entity light="type: directional; intensity: 0.2" position="-0.5 1 1"></a-entity>
 
         <!-- Sky -->
         <a-sky color="#212121"></a-sky>
 
         <!-- Ground -->
-        <a-plane src="#floor" rotation="-90 0 0" scale="20 20 1" repeat="2 2">
-        </a-plane>
+        <a-plane src="#floor" rotation="-90 0 0" scale="20 20 1" repeat="2 2"></a-plane>
 
         <!-- Camera -->
         <a-entity position="0 0 9">
@@ -40,12 +37,13 @@
         </a-entity>
 
         <!-- Your 3D Model 01 | Traffic Light -->
-        <a-entity gltf-model="#tl" position="-3.18 0.25 0" scale="0.18 0.18 0.18">
-        </a-entity>
+        <a-entity gltf-model="#tl" position="-3.18 0.25 0" scale="0.18 0.18 0.18"></a-entity>
+        <a-entity position="-2.218 4.475 0.38" light="distance:0.4;intensity:4;color:#CC0000;type:point"></a-entity>
 
         <!-- Your 3D Model 02 | Suburban Street Lamp -->
-        <a-entity gltf-model="#ssl" position="4 2.925 0" rotation="0 180 0">
-        </a-entity>
+        <a-entity gltf-model="#ssl" position="4 2.925 0" rotation="0 180 0"></a-entity>
+        <a-entity position="1.402 4.909 0.009" light="decay:2;distance:4;intensity:4;color:#fdffe0;type:point"></a-entity>
+        <a-entity position="1.402 5.479 0.009" light="angle:45;penumbra:0.3;type:spot;color:#fdffe0" rotation="-90 0 0"></a-entity>
 
     </a-scene>
 </body>
